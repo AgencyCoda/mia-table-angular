@@ -5,6 +5,11 @@
   "projects": {
     "@agencycoda/mia-table": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/agencycoda/mia-table",
       "sourceRoot": "projects/agencycoda/mia-table/src",
       "prefix": "lib",
