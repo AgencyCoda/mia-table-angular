@@ -15,6 +15,7 @@ import { MiaPagination } from '@agencycoda/mia-core';
 export class MiaTableComponent implements OnInit {
 
   @Input() config = new MiaTableConfig();
+  @Input() mockData: MiaPagination<any> | undefined;
 
   selection = new SelectionModel<any>(true, [], true);
   dataItems?: MiaPagination<any>;
@@ -27,6 +28,10 @@ export class MiaTableComponent implements OnInit {
     this.loadMocks();
   }
 
+  onClickSelect() {
+    
+  }
+
   processDisplayColumns() {
     this.displayColumns = new Array<String>();
     for (const column of this.config.columns) {
@@ -35,23 +40,8 @@ export class MiaTableComponent implements OnInit {
   }
 
   loadMocks() {
-    this.dataItems = {
-      current_page: 1,
-      first_page_url: '',
-      from: '',
-      last_page: 1,
-      last_page_url: '',
-      next_page_url: '',
-      path: '',
-      per_page: 50,
-      prev_page_url: '',
-      to: '',
-      total: 10,
-      data: [
-        {
-          
-        }
-      ]
-    };
+    if(this.mockData){
+      this.dataItems = this.mockData;
+    }
   }
 }

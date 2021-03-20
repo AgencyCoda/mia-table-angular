@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { BaseColumnComponent } from '../base-column.component';
 
 @Component({
-  selector: 'lib-string-column',
+  selector: 'mia-string-column',
   templateUrl: './string-column.component.html',
   styleUrls: ['./string-column.component.css']
 })
-export class StringColumnComponent implements OnInit {
+export class StringColumnComponent extends BaseColumnComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
   }

@@ -19,7 +19,9 @@ export * from './lib/mia-table.service';
 /**
  * Columns
  */
+export * from './lib/columns/base-column.component';
 export * from './lib/columns/string-column/string-column.component';
+export * from './lib/columns/selection-column/selection-column.component';
 
 /**
  * Components
