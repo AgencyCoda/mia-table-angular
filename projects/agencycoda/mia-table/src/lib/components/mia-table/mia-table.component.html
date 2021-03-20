@@ -10,12 +10,12 @@
 </div>-->
 
 <div class="scroll-table" @componentAnimation>
-    <!--<div class="header-table-select animated" [ngClass]="{'header-table-select-active': selection.hasValue()}">
+    <div class="header-table-select animated" [ngClass]="{'header-table-select-active': selection.hasValue()}">
         <div class="selects">{{ this.selection.selected.length }} selected</div>
         <div class="buttons">
             <button mat-button color="warn"><mat-icon>delete</mat-icon> Delete</button>
         </div>
-    </div>-->
+    </div>
     <table *ngIf="dataItems" mat-table [dataSource]="dataItems.data">
 
         <ng-container *ngFor="let column of config.columns" [matColumnDef]="column.key">
