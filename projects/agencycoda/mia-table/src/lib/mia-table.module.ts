@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
 
 /** */
 import { MiaTableComponent } from './components/mia-table/mia-table.component';
@@ -26,6 +27,7 @@ import { MoreColumnComponent } from './columns/more-column/more-column.component
     MatIconModule,
     MatTableModule,
     MatCheckboxModule,
+    MatMenuModule
   ],
   exports: [
     MiaTableComponent

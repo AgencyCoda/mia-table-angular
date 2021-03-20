@@ -20,10 +20,24 @@ export class AppComponent implements OnInit {
     this.tableConfig.columns = [
       { key: 'selection', type: 'selection', title: '' },
       //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },
-      { key: 'user', type: 'user', title: '# User', extra: { field_photo: 'photo', field_firstname: 'firstname', field_lastname: 'lastname', field_subtitle: 'role', field_is_online: 'is_online' } },
+      { key: 'user', type: 'user', title: '# User', extra: { 
+        field_photo: 'photo', field_firstname: 'firstname', field_lastname: 'lastname', field_subtitle: 'role', field_is_online: 'is_online' 
+      } },
       { key: 'title', type: 'string', title: 'Titulo', field_key: 'title' },
       { key: 'created_at', type: 'date', title: 'Created At', field_key: 'created_at' },
+      { key: 'more', type: 'more', title: '', extra: {
+        actions: [
+          { icon: 'visibility', title: 'View', key: 'view' },
+          { icon: 'create', title: 'Edit', key: 'edit' },
+          { icon: 'delete', title: 'Delete', key: 'remove' },
+        ]
+      } }
     ];
+
+    this.tableConfig.onClick.subscribe(action => {
+      console.log('--ACTION--');
+      console.log(action);
+    });
 
     this.mockData = {
       current_page: 1,
