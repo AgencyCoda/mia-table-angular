@@ -3,5 +3,48 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@agencycoda/mia-table": {
+      "projectType": "library",
+      "root": "projects/agencycoda/mia-table",
+      "sourceRoot": "projects/agencycoda/mia-table/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/agencycoda/mia-table/tsconfig.lib.json",
+            "project": "projects/agencycoda/mia-table/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/agencycoda/mia-table/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/agencycoda/mia-table/src/test.ts",
+            "tsConfig": "projects/agencycoda/mia-table/tsconfig.spec.json",
+            "karmaConfig": "projects/agencycoda/mia-table/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/agencycoda/mia-table/tsconfig.lib.json",
+              "projects/agencycoda/mia-table/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "eb0f9acc-0e6d-4a7e-a742-bae813d1753e"
+  },
+  "defaultProject": "@agencycoda/mia-table"
 }
