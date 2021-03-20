@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "build2": "ng build --prod && cd dist/agencycoda/mia-table/ && npm publish"
+    "build2": "ng build --prod && cd dist/agencycoda/mia-table/ && npm publish",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

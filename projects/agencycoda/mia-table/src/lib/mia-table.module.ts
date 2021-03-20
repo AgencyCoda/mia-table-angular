@@ -8,6 +8,8 @@ import { StringColumnComponent } from './columns/string-column/string-column.com
   imports: [
     MiaCoreModule
   ],
-  exports: []
+  exports: [
+    MiaTableComponent
+  ]
 })
 export class MiaTableModule { }
