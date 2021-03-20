@@ -19,8 +19,10 @@ export class AppComponent implements OnInit {
   loadConfig() {
     this.tableConfig.columns = [
       { key: 'selection', type: 'selection', title: '' },
-      { key: 'id', type: 'string', title: 'ID', field_key: 'id' },
+      //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },
+      { key: 'user', type: 'user', title: '# User', extra: { field_photo: 'photo', field_firstname: 'firstname', field_lastname: 'lastname', field_subtitle: 'role', field_is_online: 'is_online' } },
       { key: 'title', type: 'string', title: 'Titulo', field_key: 'title' },
+      { key: 'created_at', type: 'date', title: 'Created At', field_key: 'created_at' },
     ];
 
     this.mockData = {
@@ -37,7 +39,7 @@ export class AppComponent implements OnInit {
       total: 10,
       data: [
         {
-          id: 1, title: 'asdasdasd'
+          id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, created_at: '1989-08-25 18:00:00'
         }
       ]
     };

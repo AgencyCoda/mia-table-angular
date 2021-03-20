@@ -1,6 +1,5 @@
 import { MiaCoreModule } from '@agencycoda/mia-core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 /** Angular Material */
@@ -12,8 +11,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MiaTableComponent } from './components/mia-table/mia-table.component';
 import { StringColumnComponent } from './columns/string-column/string-column.component';
 import { SelectionColumnComponent } from './columns/selection-column/selection-column.component';
+import { UserColumnComponent } from './columns/user-column/user-column.component';
+import { DateColumnComponent } from './columns/date-column/date-column.component';
+import { SelectColumnComponent } from './columns/select-column/select-column.component';
+import { StatusColumnComponent } from './columns/status-column/status-column.component';
+import { MoreColumnComponent } from './columns/more-column/more-column.component';
 @NgModule({
-  declarations: [MiaTableComponent, StringColumnComponent, SelectionColumnComponent],
+  declarations: [MiaTableComponent, StringColumnComponent, SelectionColumnComponent, UserColumnComponent, DateColumnComponent, SelectColumnComponent, StatusColumnComponent, MoreColumnComponent],
   imports: [
     CommonModule,
     MiaCoreModule,
