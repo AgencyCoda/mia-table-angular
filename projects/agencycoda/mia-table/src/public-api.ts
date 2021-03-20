@@ -9,6 +9,8 @@
 export * from './lib/entities/mia-table-config';
 export * from './lib/entities/mia-column';
 
+export * from './lib/animations/table-animation';
+
 /**
  * Services
  */
