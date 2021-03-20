@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build2": "ng build --prod && cd dist/agencycoda/mia-table/ && npm publish"
   },
   "private": true,
   "dependencies": {
