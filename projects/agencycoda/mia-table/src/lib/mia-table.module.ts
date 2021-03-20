@@ -1,5 +1,5 @@
 import { MiaCoreModule } from '@agencycoda/mia-core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
@@ -15,8 +15,7 @@ import { SelectionColumnComponent } from './columns/selection-column/selection-c
 @NgModule({
   declarations: [MiaTableComponent, StringColumnComponent, SelectionColumnComponent],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
+    CommonModule,
     MiaCoreModule,
 
     // Angular Material
