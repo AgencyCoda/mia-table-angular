@@ -8,7 +8,7 @@
     <button mat-stroked-button [matMenuTriggerFor]="columns" *ngIf="hasColumnEdit" class="button-filter" matTooltip="Edit Columns"><mat-icon>view_column</mat-icon></button>
 </div>-->
 
-<div class="scroll-table" @componentAnimation>
+<div *ngIf="(!config.hasEmptyScreen) || (config.hasEmptyScreen && !_isLoading && dataItems && dataItems!.data.length > 0)" class="scroll-table" @componentAnimation>
     <div class="header-table-select animated" [ngClass]="{'header-table-select-active': selection.hasValue()}">
         <div class="selects">{{ this.selection.selected.length }} selected</div>
         <div class="buttons">
@@ -48,13 +48,20 @@
         
         <!-- Row shown when there is no matching data. -->
         <tr class="mat-row" *matNoDataRow>
-            <td class="mat-cell" colspan="100">No data matching the filter ""</td>
+            <td class="mat-cell" colspan="100">No data matching</td>
         </tr>
     </table>
 
     <mat-paginator *ngIf="dataItems" [length]="dataItems!.total" [pageSize]="config.query.itemPerPage" [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPageChange($event)"></mat-paginator>
 </div>
 
+<div *ngIf="config.hasEmptyScreen && !_isLoading && dataItems && dataItems!.data.length <= 0" class="empty-screen">
+    <div class="empty-screen-container">
+        <img *ngIf="config.emptyScreenImage" [src]="config.emptyScreenImage" alt="Empty Screen" />
+        <h2 *ngIf="config.emptyScreenTitle" class="title-header-h2">{{ config.emptyScreenTitle }}</h2>
+        <p *ngIf="config.emptyScreenText">{{ config.emptyScreenText }}</p>
+    </div>
+</div>
 
 
 <!--<mat-menu #filters="matMenu" class="mat-menu-table-element">

@@ -34,6 +34,9 @@ export class AppComponent implements OnInit {
       } }
     ];
 
+    this.tableConfig.hasEmptyScreen = true;
+    this.tableConfig.emptyScreenTitle = 'No tenes cargado ningun elemento todavia';
+
     this.tableConfig.onClick.subscribe(result => {
       console.log('--ACTION--');
       console.log(result.key);

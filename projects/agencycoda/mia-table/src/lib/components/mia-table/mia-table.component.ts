@@ -24,6 +24,7 @@ export class MiaTableComponent implements OnInit {
   dataItems?: MiaPagination<any>;
   displayColumns: Array<String> = [];
   _isLoading = true;
+  _isFirstLoad = true;
 
   constructor() { }
 
@@ -49,6 +50,7 @@ export class MiaTableComponent implements OnInit {
     this.setStartLoading();
     this.config.service.list(this.config.query).then(result => {
       this.dataItems = result;
+      this.processFirstLoad();
       this.setEndLoading();
     });
   }
@@ -70,7 +72,18 @@ export class MiaTableComponent implements OnInit {
   loadMocks() {
     if(this.mockData){
       this.dataItems = this.mockData;
-      this.setStartLoading();
+      this.setEndLoading();
+    }
+  }
+
+  processFirstLoad() {
+    if(!this._isFirstLoad){
+      return;
+    }
+
+    this._isFirstLoad = false;
+    if(this.dataItems!.total > 0){
+      this.config.hasEmptyScreen = false;
     }
   }
   
@@ -80,7 +93,7 @@ export class MiaTableComponent implements OnInit {
   }
 
   setEndLoading() {
-    this._isLoading = true;
+    this._isLoading = false;
     this.isLoading.emit(false);
   }
 }

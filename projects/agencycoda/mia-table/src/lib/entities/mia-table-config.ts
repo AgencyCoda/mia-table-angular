@@ -8,4 +8,9 @@ export class MiaTableConfig {
     query: MiaQuery = new MiaQuery();
 
     onClick: Subject<{key: string, item: any }> = new Subject();
+
+    hasEmptyScreen = false;
+    emptyScreenImage?: string;
+    emptyScreenTitle?: string;
+    emptyScreenText?: string;
 }
