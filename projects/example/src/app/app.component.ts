@@ -24,6 +24,18 @@ export class AppComponent implements OnInit {
         field_photo: 'photo', field_firstname: 'firstname', field_lastname: 'lastname', field_subtitle: 'role', field_is_online: 'is_online' 
       } },
       { key: 'title', type: 'string', title: 'Titulo', field_key: 'title' },
+      { key: 'status', type: 'status', title: 'Estado', field_key: 'status', extra: {
+        options: [
+          { value: 0, title: 'Estado 1', color: 'warning' },
+          { value: 1, title: 'Estado 2', color: 'error' },
+          { value: 2, title: 'Estado 3', color: 'violet' },
+          { value: 3, title: 'Estado 4', color: 'success' },
+          { value: 4, title: 'Estado 5', color: 'blue' },
+          { value: 5, title: 'Estado 6', color: 'cyan' },
+          { value: 6, title: 'Estado 7', color: 'pink' },
+          { value: 7, title: 'Estado 8', color: '' },
+        ]
+      } },
       { key: 'created_at', type: 'date', title: 'Created At', field_key: 'created_at' },
       { key: 'more', type: 'more', title: '', extra: {
         actions: [
@@ -57,7 +69,7 @@ export class AppComponent implements OnInit {
       total: 1,
       data: [
         {
-          id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, created_at: '1989-08-25 18:00:00'
+          id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 3, created_at: '1989-08-25 18:00:00'
         }
       ]
     };

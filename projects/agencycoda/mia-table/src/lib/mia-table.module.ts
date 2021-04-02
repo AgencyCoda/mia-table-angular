@@ -10,6 +10,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatChipsModule } from '@angular/material/chips';
 
 /** */
 import { MiaTableComponent } from './components/mia-table/mia-table.component';
@@ -21,7 +22,16 @@ import { SelectColumnComponent } from './columns/select-column/select-column.com
 import { StatusColumnComponent } from './columns/status-column/status-column.component';
 import { MoreColumnComponent } from './columns/more-column/more-column.component';
 @NgModule({
-  declarations: [MiaTableComponent, StringColumnComponent, SelectionColumnComponent, UserColumnComponent, DateColumnComponent, SelectColumnComponent, StatusColumnComponent, MoreColumnComponent],
+  declarations: [
+    MiaTableComponent,
+    StringColumnComponent,
+    SelectionColumnComponent,
+    UserColumnComponent,
+    DateColumnComponent,
+    SelectColumnComponent,
+    StatusColumnComponent,
+    MoreColumnComponent
+  ],
   imports: [
     CommonModule,
     MiaCoreModule,
@@ -33,7 +43,8 @@ import { MoreColumnComponent } from './columns/more-column/more-column.component
     MatTableModule,
     MatCheckboxModule,
     MatMenuModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatChipsModule
   ],
   exports: [
     MiaTableComponent
