@@ -52,7 +52,7 @@
         </tr>
     </table>
 
-    <!--<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" *ngIf="hasPagination"></mat-paginator>-->
+    <mat-paginator *ngIf="dataItems" [length]="dataItems!.total" [pageSize]="config.query.itemPerPage" [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPageChange($event)"></mat-paginator>
 </div>
 
 

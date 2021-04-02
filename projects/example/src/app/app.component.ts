@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
       per_page: 50,
       prev_page_url: '',
       to: '',
-      total: 10,
+      total: 1,
       data: [
         {
           id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, created_at: '1989-08-25 18:00:00'

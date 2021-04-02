@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 /** */
 import { MiaTableComponent } from './components/mia-table/mia-table.component';
@@ -29,7 +30,8 @@ import { MoreColumnComponent } from './columns/more-column/more-column.component
     MatButtonModule,
     MatTableModule,
     MatCheckboxModule,
-    MatMenuModule
+    MatMenuModule,
+    MatPaginatorModule
   ],
   exports: [
     MiaTableComponent

@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } fro
 import { TableAnimation } from '../../animations/table-animation';
 import { MiaTableConfig } from '../../entities/mia-table-config';
 import { MiaPagination } from '@agencycoda/mia-core';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'mia-table',
@@ -50,6 +51,13 @@ export class MiaTableComponent implements OnInit {
       this.dataItems = result;
       this.setEndLoading();
     });
+  }
+
+  onPageChange(event: PageEvent) {
+    console.log(event.pageSize);
+    this.config.query.itemPerPage = event.pageSize;
+    this.config.query.pageCurrent = event.pageIndex + 1;
+    this.loadItems();
   }
 
   processDisplayColumns() {
