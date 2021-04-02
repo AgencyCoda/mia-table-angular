@@ -7,5 +7,5 @@ export class MiaTableConfig {
     service!: MiaBaseCrudHttpService<any>;
     query: MiaQuery = new MiaQuery();
 
-    onClick: Subject<string> = new Subject();
+    onClick: Subject<{key: string, item: any }> = new Subject();
 }
