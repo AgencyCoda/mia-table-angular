@@ -1,6 +1,7 @@
 import { MiaCoreModule } from '@agencycoda/mia-core';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MiaLoadingModule } from '@agencycoda/mia-loading';
 
 /** Angular Material */
 import { MatTableModule } from '@angular/material/table';
@@ -24,6 +25,7 @@ import { MoreColumnComponent } from './columns/more-column/more-column.component
   imports: [
     CommonModule,
     MiaCoreModule,
+    MiaLoadingModule,
 
     // Angular Material
     MatIconModule,

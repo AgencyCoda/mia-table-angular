@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
       } }
     ];
 
+    this.tableConfig.loadingColor = 'red';
     this.tableConfig.hasEmptyScreen = true;
     this.tableConfig.emptyScreenTitle = 'No tenes cargado ningun elemento todavia';
 

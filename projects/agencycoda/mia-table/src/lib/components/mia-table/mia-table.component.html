@@ -8,6 +8,10 @@
     <button mat-stroked-button [matMenuTriggerFor]="columns" *ngIf="hasColumnEdit" class="button-filter" matTooltip="Edit Columns"><mat-icon>view_column</mat-icon></button>
 </div>-->
 
+<div *ngIf="_isLoading" class="table-loading">
+    <mia-loading-squares [color]="config.loadingColor"></mia-loading-squares>
+</div>
+
 <div *ngIf="(!config.hasEmptyScreen) || (config.hasEmptyScreen && !_isLoading && dataItems && dataItems!.data.length > 0)" class="scroll-table" @componentAnimation>
     <div class="header-table-select animated" [ngClass]="{'header-table-select-active': selection.hasValue()}">
         <div class="selects">{{ this.selection.selected.length }} selected</div>

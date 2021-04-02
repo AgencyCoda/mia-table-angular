@@ -9,6 +9,8 @@ export class MiaTableConfig {
 
     onClick: Subject<{key: string, item: any }> = new Subject();
 
+    loadingColor = '#000';
+
     hasEmptyScreen = false;
     emptyScreenImage?: string;
     emptyScreenTitle?: string;
