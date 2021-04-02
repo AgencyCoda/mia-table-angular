@@ -1,5 +1,5 @@
 import { SelectionModel } from '@angular/cdk/collections';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { TableAnimation } from '../../animations/table-animation';
 import { MiaTableConfig } from '../../entities/mia-table-config';
 import { MiaPagination } from '@agencycoda/mia-core';
