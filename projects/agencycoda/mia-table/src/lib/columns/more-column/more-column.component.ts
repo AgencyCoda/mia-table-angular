@@ -18,7 +18,9 @@ export class MoreColumnComponent extends BaseColumnComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clickButton(itemAction: any) {
+  clickButton(itemAction: any, $event: UIEvent) {
     this.config.onClick.next({ key: itemAction.key, item: this.item });
+    $event.preventDefault();
+    return false;
   }
 }

@@ -41,6 +41,10 @@ export class MiaTableComponent implements OnInit {
   }
 
   loadItems() {
+    if(this.config.service == undefined){
+      return;
+    }
+    
     this.setStartLoading();
     this.config.service.list(this.config.query).then(result => {
       this.dataItems = result;
