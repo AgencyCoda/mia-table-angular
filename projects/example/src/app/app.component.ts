@@ -34,9 +34,9 @@ export class AppComponent implements OnInit {
       } }
     ];
 
-    this.tableConfig.onClick.subscribe(action => {
+    this.tableConfig.onClick.subscribe(result => {
       console.log('--ACTION--');
-      console.log(action);
+      console.log(result.key);
     });
 
     this.mockData = {
