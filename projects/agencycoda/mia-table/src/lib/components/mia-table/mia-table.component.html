@@ -12,7 +12,7 @@
     <mia-loading-squares [color]="config.loadingColor"></mia-loading-squares>
 </div>
 
-<div *ngIf="(!config.hasEmptyScreen) || (config.hasEmptyScreen && !_isLoading && dataItems && dataItems!.data.length > 0)" class="scroll-table" @componentAnimation>
+<div *ngIf="(!config.hasEmptyScreen && !_isLoading) || (config.hasEmptyScreen && !_isLoading && dataItems && dataItems!.data.length > 0)" class="scroll-table" @componentAnimation>
     <div class="header-table-select animated" [ngClass]="{'header-table-select-active': selection.hasValue()}">
         <div class="selects">{{ this.selection.selected.length }} selected</div>
         <div class="buttons">
