@@ -14,6 +14,7 @@ import { MatChipsModule } from '@angular/material/chips';
 
 /** */
 import { MiaTableComponent } from './components/mia-table/mia-table.component';
+import { BaseColumnComponent } from './columns/base-column.component';
 import { StringColumnComponent } from './columns/string-column/string-column.component';
 import { SelectionColumnComponent } from './columns/selection-column/selection-column.component';
 import { UserColumnComponent } from './columns/user-column/user-column.component';
@@ -24,6 +25,7 @@ import { MoreColumnComponent } from './columns/more-column/more-column.component
 @NgModule({
   declarations: [
     MiaTableComponent,
+    BaseColumnComponent,
     StringColumnComponent,
     SelectionColumnComponent,
     UserColumnComponent,
