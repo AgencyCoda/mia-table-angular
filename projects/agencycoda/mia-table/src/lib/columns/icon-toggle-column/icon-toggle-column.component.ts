@@ -1,5 +1,6 @@
-import { BaseColumnComponent, MiaTableConfig } from '@agencycoda/mia-table';
 import { Component, Input, OnInit } from '@angular/core';
+import { MiaTableConfig } from '../../entities/mia-table-config';
+import { BaseColumnComponent } from '../base-column.component';
 
 @Component({
   selector: 'mia-icon-toggle-column',
