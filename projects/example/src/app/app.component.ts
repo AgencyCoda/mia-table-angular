@@ -37,6 +37,13 @@ export class AppComponent implements OnInit {
         ]
       } },
       { key: 'created_at', type: 'date', title: 'Created At', field_key: 'created_at' },
+      { key: 'icon', type: 'icon-toggle', title: '', field_key: 'status', extra: {
+        key_action: 'click-lock',
+        options: [
+          { value: 0, color: 'red', icon: 'lock' },
+          { value: 1, color: '#000', icon: 'lock-open' },
+        ]
+      } },
       { key: 'more', type: 'more', title: '', extra: {
         actions: [
           { icon: 'visibility', title: 'View', key: 'view' },
@@ -69,7 +76,7 @@ export class AppComponent implements OnInit {
       total: 1,
       data: [
         {
-          id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 3, created_at: '1989-08-25 18:00:00'
+          id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
         }
       ]
     };

@@ -22,6 +22,7 @@ import { DateColumnComponent } from './columns/date-column/date-column.component
 import { SelectColumnComponent } from './columns/select-column/select-column.component';
 import { StatusColumnComponent } from './columns/status-column/status-column.component';
 import { MoreColumnComponent } from './columns/more-column/more-column.component';
+import { IconToggleColumnComponent } from './columns/icon-toggle-column/icon-toggle-column.component';
 @NgModule({
   declarations: [
     MiaTableComponent,
@@ -32,7 +33,8 @@ import { MoreColumnComponent } from './columns/more-column/more-column.component
     DateColumnComponent,
     SelectColumnComponent,
     StatusColumnComponent,
-    MoreColumnComponent
+    MoreColumnComponent,
+    IconToggleColumnComponent
   ],
   imports: [
     CommonModule,
