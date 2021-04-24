@@ -44,6 +44,7 @@ export class MiaTableComponent implements OnInit {
 
   onClickDeleteBulk() {
     this.config.onClick.next({ key: 'delete-bulk', item: this.selection.selected });
+    this.selection.clear();
   }
 
   loadItems() {
