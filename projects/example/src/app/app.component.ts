@@ -77,6 +77,15 @@ export class AppComponent implements OnInit {
       data: [
         {
           id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+        },
+        {
+          id: 2, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+        },
+        {
+          id: 3, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+        },
+        {
+          id: 4, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
         }
       ]
     };
