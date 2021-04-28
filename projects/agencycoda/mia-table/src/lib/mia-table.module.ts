@@ -23,6 +23,7 @@ import { SelectColumnComponent } from './columns/select-column/select-column.com
 import { StatusColumnComponent } from './columns/status-column/status-column.component';
 import { MoreColumnComponent } from './columns/more-column/more-column.component';
 import { IconToggleColumnComponent } from './columns/icon-toggle-column/icon-toggle-column.component';
+import { PhotoColumnComponent } from './columns/photo-column/photo-column.component';
 @NgModule({
   declarations: [
     MiaTableComponent,
@@ -34,7 +35,8 @@ import { IconToggleColumnComponent } from './columns/icon-toggle-column/icon-tog
     SelectColumnComponent,
     StatusColumnComponent,
     MoreColumnComponent,
-    IconToggleColumnComponent
+    IconToggleColumnComponent,
+    PhotoColumnComponent
   ],
   imports: [
     CommonModule,
