@@ -1,6 +1,7 @@
 import { MiaPagination } from '@agencycoda/mia-core';
 import { Component, OnInit } from '@angular/core';
 import { MiaTableConfig } from 'projects/agencycoda/mia-table/src/public-api';
+import { TestService } from './test.service';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,18 @@ export class AppComponent implements OnInit {
   tableConfig: MiaTableConfig = new MiaTableConfig();
   mockData?: MiaPagination<any>;
 
+  constructor(
+    protected testService: TestService
+  ){
+
+  }
+
   ngOnInit(): void {
     this.loadConfig();
   }
 
   loadConfig() {
+    this.tableConfig.service = this.testService;
     this.tableConfig.columns = [
       { key: 'selection', type: 'selection', title: '' },
       //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },
