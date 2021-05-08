@@ -47,17 +47,21 @@ export class MiaTableComponent implements OnInit {
     this.selection.clear();
   }
 
-  loadItems() {
+  loadItemsWithExtra(params: any) {
     if(this.config.service == undefined){
       return;
     }
     
     this.setStartLoading();
-    this.config.service.list(this.config.query).then(result => {
+    this.config.service.listWithExtras(this.config.query, params).then(result => {
       this.dataItems = result;
       this.processFirstLoad();
       this.setEndLoading();
     });
+  }
+
+  loadItems() {
+    this.loadItemsWithExtra({});
   }
 
   onPageChange(event: PageEvent) {
