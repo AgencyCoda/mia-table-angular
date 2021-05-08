@@ -46,6 +46,7 @@
                 <mia-more-column *ngIf="column.type == 'more'" [column]="column" [item]="item" [config]="config"></mia-more-column>
                 <mia-status-column *ngIf="column.type == 'status'" [column]="column" [item]="item"></mia-status-column>
                 <mia-icon-toggle-column *ngIf="column.type == 'icon-toggle'" [column]="column" [item]="item" [config]="config"></mia-icon-toggle-column>
+                <mia-custom-column *ngIf="column.type == 'custom'" [column]="column" [item]="item" [config]="config"></mia-custom-column>
             </td>
 
         </ng-container>

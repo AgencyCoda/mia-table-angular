@@ -1,6 +1,7 @@
 import { MiaPagination } from '@agencycoda/mia-core';
 import { Component, OnInit } from '@angular/core';
 import { MiaTableConfig } from 'projects/agencycoda/mia-table/src/public-api';
+import { CustomOneColumnComponent } from './custom-one-column/custom-one-column.component';
 import { TestService } from './test.service';
 
 @Component({
@@ -24,11 +25,12 @@ export class AppComponent implements OnInit {
   }
 
   loadConfig() {
-    this.tableConfig.service = this.testService;
+    //this.tableConfig.service = this.testService;
     this.tableConfig.columns = [
       { key: 'selection', type: 'selection', title: '' },
       //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },
       { key: 'photo', type: 'photo', title: 'Photo', field_key: 'photo' },
+      { key: 'custom', type: 'custom', title: 'Custom', extra: { component: CustomOneColumnComponent } },
       { key: 'user', type: 'user', title: '# User', extra: { 
         field_photo: 'photo', field_firstname: 'firstname', field_lastname: 'lastname', field_subtitle: 'role', field_is_online: 'is_online' 
       } },

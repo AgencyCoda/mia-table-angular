@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { MiaTableModule } from 'projects/agencycoda/mia-table/src/public-api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomOneColumnComponent } from './custom-one-column/custom-one-column.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomOneColumnComponent
   ],
   imports: [
     BrowserModule,

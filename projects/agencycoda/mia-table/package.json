@@ -1,6 +1,6 @@
 {
   "name": "@agencycoda/mia-table",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9",

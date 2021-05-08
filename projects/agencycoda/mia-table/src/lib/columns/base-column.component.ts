@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { MiaColumn } from "../entities/mia-column";
+import { MiaTableConfig } from "../entities/mia-table-config";
 
 @Component({
     selector: 'mia-base-column',
@@ -8,6 +9,7 @@ import { MiaColumn } from "../entities/mia-column";
 export class BaseColumnComponent {
     @Input() column: MiaColumn = new MiaColumn();
     @Input() item: any;
+    @Input() config?: MiaTableConfig;
 
     getFieldValueByKey(key: string|Array<string>|undefined): any {
       if(key == undefined){
