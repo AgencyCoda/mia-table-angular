@@ -1,4 +1,3 @@
-import { MiaColumn } from '@agencycoda/mia-table';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSelectionListChange } from '@angular/material/list';
 import { StorageMap } from '@ngx-pwa/local-storage';
