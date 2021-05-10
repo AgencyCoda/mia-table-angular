@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
 
   loadConfig() {
     //this.tableConfig.service = this.testService;
+    this.tableConfig.id = 'table-test';
     this.tableConfig.columns = [
       { key: 'selection', type: 'selection', title: '' },
       //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },

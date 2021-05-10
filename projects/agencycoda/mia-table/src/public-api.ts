@@ -33,6 +33,7 @@ export * from './lib/columns/photo-column/photo-column.component';
  * Components
  */
 export * from './lib/components/mia-table/mia-table.component';
+export * from './lib/components/mia-edit-columns/mia-edit-columns.component';
 
 /**
  * Modules

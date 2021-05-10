@@ -4,6 +4,9 @@ import { TableAnimation } from '../../animations/table-animation';
 import { MiaTableConfig } from '../../entities/mia-table-config';
 import { MiaPagination } from '@agencycoda/mia-core';
 import { PageEvent } from '@angular/material/paginator';
+import { StorageMap } from '@ngx-pwa/local-storage';
+
+export const MIA_TABLE_KEY_STORAGE_COLUMNS = 'mia_table.columns_';
 
 @Component({
   selector: 'mia-table',
@@ -26,10 +29,12 @@ export class MiaTableComponent implements OnInit {
   _isLoading = true;
   _isFirstLoad = true;
 
-  constructor() { }
+  constructor(
+    protected storage: StorageMap
+  ) { }
 
   ngOnInit(): void {
-    this.processDisplayColumns();
+    this.verifyIfSavedColumnsEdit();
     this.loadMocks();
     this.loadItems();
   }
@@ -71,10 +76,48 @@ export class MiaTableComponent implements OnInit {
     this.loadItems();
   }
 
+  verifyIfSavedColumnsEdit() {
+    // Verify if has ID table
+    if(this.config.id == undefined || this.config.id == ''){
+      this.showAllColumns();
+      return;
+    }
+    // Verify if saved edit columns
+    this.storage.get<Array<boolean>>(MIA_TABLE_KEY_STORAGE_COLUMNS + this.config.id, { type: 'array', items: { type: 'boolean' }}).subscribe(result => {
+      if(result == undefined){
+        this.showAllColumns();
+        return;
+      }
+      console.log('--Storage--');
+      console.log(result);
+
+      if(result.length != this.config.columns.length){
+        this.showAllColumns();
+        return;
+      }
+
+      for (let i = 0; i < result.length; i++) {
+        const isShow = result[i];
+        this.config.columns[i].isShow = isShow;
+      }
+
+      this.processDisplayColumns();
+    });
+  }
+
+  showAllColumns() {
+    this.config.columns.forEach(c => {
+      c.isShow = true;
+    });
+    this.processDisplayColumns();
+  }
+
   processDisplayColumns() {
     this.displayColumns = new Array<String>();
     for (const column of this.config.columns) {
-      this.displayColumns.push(column.key);
+      if(column.isShow){
+        this.displayColumns.push(column.key);
+      }
     }
   }
 

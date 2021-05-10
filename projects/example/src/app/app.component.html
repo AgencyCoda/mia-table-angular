@@ -1,2 +1,5 @@
 <h1>Mia Table Angular</h1>
-<mia-table [config]="tableConfig" [mockData]="mockData"></mia-table>
+<mia-edit-columns [config]="tableConfig" [miaTable]="tableComp">
+    <button>Edit Columns</button>
+</mia-edit-columns>
+<mia-table #tableComp [config]="tableConfig" [mockData]="mockData"></mia-table>

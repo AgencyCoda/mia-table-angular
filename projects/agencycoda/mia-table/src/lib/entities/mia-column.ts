@@ -4,4 +4,5 @@ export class MiaColumn {
     title: string = '';
     field_key?: string | Array<string>;
     extra?: any;
+    isShow?: boolean = true;
 }

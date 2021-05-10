@@ -3,6 +3,7 @@ import { Subject } from "rxjs";
 import { MiaColumn } from "./mia-column";
 
 export class MiaTableConfig {
+    id?: string = '';
     columns: Array<MiaColumn> = [];
     service!: MiaBaseCrudHttpService<any>;
     query: MiaQuery = new MiaQuery();

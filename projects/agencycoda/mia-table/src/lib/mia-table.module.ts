@@ -1,7 +1,7 @@
 import { MiaCoreModule } from '@agencycoda/mia-core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { MiaLoadingModule } from '@agencycoda/mia-loading';
 
 /** Angular Material */
 import { MatTableModule } from '@angular/material/table';
@@ -11,6 +11,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
+
+/** Others libraries */
+import { MiaLoadingModule } from '@agencycoda/mia-loading';
+import { StorageModule } from '@ngx-pwa/local-storage';
 
 /** */
 import { MiaTableComponent } from './components/mia-table/mia-table.component';
@@ -25,6 +31,7 @@ import { MoreColumnComponent } from './columns/more-column/more-column.component
 import { IconToggleColumnComponent } from './columns/icon-toggle-column/icon-toggle-column.component';
 import { PhotoColumnComponent } from './columns/photo-column/photo-column.component';
 import { CustomColumnComponent } from './columns/custom-column/custom-column.component';
+import { MiaEditColumnsComponent } from './components/mia-edit-columns/mia-edit-columns.component';
 @NgModule({
   declarations: [
     MiaTableComponent,
@@ -38,10 +45,13 @@ import { CustomColumnComponent } from './columns/custom-column/custom-column.com
     MoreColumnComponent,
     IconToggleColumnComponent,
     PhotoColumnComponent,
-    CustomColumnComponent
+    CustomColumnComponent,
+    MiaEditColumnsComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    StorageModule,
     MiaCoreModule,
     MiaLoadingModule,
 
@@ -52,10 +62,13 @@ import { CustomColumnComponent } from './columns/custom-column/custom-column.com
     MatCheckboxModule,
     MatMenuModule,
     MatPaginatorModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSelectModule,
+    MatListModule
   ],
   exports: [
-    MiaTableComponent
+    MiaTableComponent,
+    MiaEditColumnsComponent
   ]
 })
 export class MiaTableModule { }
