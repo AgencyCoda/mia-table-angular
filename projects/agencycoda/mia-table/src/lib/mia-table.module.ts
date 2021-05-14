@@ -32,6 +32,7 @@ import { IconToggleColumnComponent } from './columns/icon-toggle-column/icon-tog
 import { PhotoColumnComponent } from './columns/photo-column/photo-column.component';
 import { CustomColumnComponent } from './columns/custom-column/custom-column.component';
 import { MiaEditColumnsComponent } from './components/mia-edit-columns/mia-edit-columns.component';
+import { ItemRelationColumnComponent } from './columns/item-relation-column/item-relation-column.component';
 @NgModule({
   declarations: [
     MiaTableComponent,
@@ -46,7 +47,8 @@ import { MiaEditColumnsComponent } from './components/mia-edit-columns/mia-edit-
     IconToggleColumnComponent,
     PhotoColumnComponent,
     CustomColumnComponent,
-    MiaEditColumnsComponent
+    MiaEditColumnsComponent,
+    ItemRelationColumnComponent
   ],
   imports: [
     CommonModule,

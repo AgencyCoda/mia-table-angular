@@ -1,4 +1,4 @@
-import { MiaPagination } from '@agencycoda/mia-core';
+import { MiaPagination, MiaQuery } from '@agencycoda/mia-core';
 import { Component, OnInit } from '@angular/core';
 import { MiaTableConfig } from 'projects/agencycoda/mia-table/src/public-api';
 import { CustomOneColumnComponent } from './custom-one-column/custom-one-column.component';
@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
     this.tableConfig.columns = [
       { key: 'selection', type: 'selection', title: '' },
       //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },
+      { key: 'item-role', type: 'item-relation', title: 'Role', field_key: 'role_id', extra: { field_display: 'title', field_relation_id: 'id', service: this.testService, query: new MiaQuery() } },
       { key: 'photo', type: 'photo', title: 'Photo', field_key: 'photo' },
       { key: 'custom', type: 'custom', title: 'Custom', extra: { component: CustomOneColumnComponent } },
       { key: 'user', type: 'user', title: '# User', extra: { 
@@ -88,16 +89,16 @@ export class AppComponent implements OnInit {
       total: 1,
       data: [
         {
-          id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+          id: 1, role_id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
         },
         {
-          id: 2, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+          id: 2, role_id: 3, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
         },
         {
-          id: 3, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+          id: 3, role_id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
         },
         {
-          id: 4, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+          id: 4, role_id: 4, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
         }
       ]
     };
