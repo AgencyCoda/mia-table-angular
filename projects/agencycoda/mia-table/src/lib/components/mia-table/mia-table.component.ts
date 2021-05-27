@@ -5,6 +5,7 @@ import { MiaTableConfig } from '../../entities/mia-table-config';
 import { MiaPagination } from '@agencycoda/mia-core';
 import { PageEvent } from '@angular/material/paginator';
 import { StorageMap } from '@ngx-pwa/local-storage';
+import { Observable } from 'rxjs';
 
 export const MIA_TABLE_KEY_STORAGE_COLUMNS = 'mia_table.columns_';
 
@@ -52,17 +53,30 @@ export class MiaTableComponent implements OnInit {
     this.selection.clear();
   }
 
+  loadWithObservable(serviceOb: Observable<MiaPagination<any>>) {
+    this.setStartLoading();
+    serviceOb.subscribe(result => {
+      this.dataItems = result;
+      this.processFirstLoad();
+      this.setEndLoading();
+    });
+  }
+
+  loadWithPromise(servicePromise: Promise<MiaPagination<any>>) {
+    this.setStartLoading();
+    servicePromise.then(result => {
+      this.dataItems = result;
+      this.processFirstLoad();
+      this.setEndLoading();
+    });
+  }
+
   loadItemsWithExtra(params: any) {
     if(this.config.service == undefined){
       return;
     }
     
-    this.setStartLoading();
-    this.config.service.listWithExtras(this.config.query, params).then(result => {
-      this.dataItems = result;
-      this.processFirstLoad();
-      this.setEndLoading();
-    });
+    this.loadWithPromise(this.config.service.listWithExtras(this.config.query, params));
   }
 
   loadItems() {
