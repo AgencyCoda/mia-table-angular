@@ -23,6 +23,7 @@ export class MiaTableComponent implements OnInit {
   @Input() mockData: MiaPagination<any> | undefined;
 
   @Output() isLoading = new EventEmitter<boolean>();
+  @Output() pageChange = new EventEmitter<PageEvent>();
 
   selection = new SelectionModel<any>(true, [], true);
   dataItems?: MiaPagination<any>;
@@ -84,9 +85,9 @@ export class MiaTableComponent implements OnInit {
   }
 
   onPageChange(event: PageEvent) {
-    console.log(event.pageSize);
     this.config.query.itemPerPage = event.pageSize;
     this.config.query.pageCurrent = event.pageIndex + 1;
+    this.pageChange.emit(event);
     this.loadItems();
   }
 
