@@ -1,14 +1,14 @@
 {
   "name": "@agencycoda/mia-table",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "peerDependencies": {
-    "@angular/common": "^11.0.9",
-    "@angular/core": "^11.0.9",
-    "@angular/cdk": "^11.2.5",
-    "@angular/material": "^11.2.5",
-    "@agencycoda/mia-core": "^11.0.11",
-    "@agencycoda/mia-loading": "^0.0.2",
-    "@ngx-pwa/local-storage": "^11.1.0"
+    "@angular/common": ">=11.0.9",
+    "@angular/core": ">=11.0.9",
+    "@angular/cdk": ">=11.2.5",
+    "@angular/material": ">=11.2.5",
+    "@agencycoda/mia-core": ">=11.0.11",
+    "@agencycoda/mia-loading": ">=0.0.2",
+    "@ngx-pwa/local-storage": ">=11.1.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
