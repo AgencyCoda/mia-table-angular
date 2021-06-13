@@ -33,6 +33,7 @@ import { PhotoColumnComponent } from './columns/photo-column/photo-column.compon
 import { CustomColumnComponent } from './columns/custom-column/custom-column.component';
 import { MiaEditColumnsComponent } from './components/mia-edit-columns/mia-edit-columns.component';
 import { ItemRelationColumnComponent } from './columns/item-relation-column/item-relation-column.component';
+import { FilesizeColumnComponent } from './columns/filesize-column/filesize-column.component';
 @NgModule({
   declarations: [
     MiaTableComponent,
@@ -48,7 +49,8 @@ import { ItemRelationColumnComponent } from './columns/item-relation-column/item
     PhotoColumnComponent,
     CustomColumnComponent,
     MiaEditColumnsComponent,
-    ItemRelationColumnComponent
+    ItemRelationColumnComponent,
+    FilesizeColumnComponent
   ],
   imports: [
     CommonModule,
