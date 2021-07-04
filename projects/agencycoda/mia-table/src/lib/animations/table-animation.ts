@@ -6,8 +6,8 @@ export class TableAnimation {
         transition('void => *', [
           query('tr', style({ transform: 'translateY(100px)', opacity: 0 })),
           query('tr' ,
-          stagger('150ms', [
-            animate('800ms ease', style({ transform: 'translateY(0)', opacity: 1 }))
+          stagger('100ms', [
+            animate('400ms ease', style({ transform: 'translateY(0)', opacity: 1 }))
           ]))
         ])
     ]);

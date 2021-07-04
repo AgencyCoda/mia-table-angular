@@ -8,7 +8,11 @@
 
 export * from './lib/entities/mia-table-config';
 export * from './lib/entities/mia-column';
+export * from './lib/entities/mia-table-editable-config';
 
+/**
+ * Animations
+ */
 export * from './lib/animations/table-animation';
 
 /**
@@ -34,6 +38,7 @@ export * from './lib/columns/filesize-column/filesize-column.component';
  * Components
  */
 export * from './lib/components/mia-table/mia-table.component';
+export * from './lib/components/mia-table-editable/mia-table-editable.component';
 export * from './lib/components/mia-edit-columns/mia-edit-columns.component';
 
 /**

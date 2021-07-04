@@ -3,3 +3,7 @@
     <button>Edit Columns</button>
 </mia-edit-columns>
 <mia-table #tableComp [config]="tableConfig" [mockData]="mockData"></mia-table>
+
+<h1>Mia Table Editable</h1>
+<mia-table-editable #tableEditable [config]="tableEditableConfig" [dataItems]="tableDataEditable"></mia-table-editable>
+<button (click)="onClickSave()">Save All</button>

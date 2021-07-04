@@ -1,6 +1,6 @@
 import { MiaPagination, MiaQuery } from '@agencycoda/mia-core';
-import { Component, OnInit } from '@angular/core';
-import { MiaTableConfig } from 'projects/agencycoda/mia-table/src/public-api';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MiaColumn, MiaTableConfig, MiaTableEditableComponent, MiaTableEditableConfig } from 'projects/agencycoda/mia-table/src/public-api';
 import { CustomOneColumnComponent } from './custom-one-column/custom-one-column.component';
 import { TestService } from './test.service';
 
@@ -11,7 +11,13 @@ import { TestService } from './test.service';
 })
 export class AppComponent implements OnInit {
 
+  @ViewChild('tableEditable') tableEditable!: MiaTableEditableComponent;
+
   tableConfig: MiaTableConfig = new MiaTableConfig();
+
+  tableEditableConfig: MiaTableEditableConfig = new MiaTableEditableConfig();
+  tableDataEditable: Array<any> = [];
+
   mockData?: MiaPagination<any>;
 
   constructor(
@@ -22,6 +28,39 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadConfig();
+    this.loadConfigEditable();
+  }
+
+  onClickSave() {
+    console.log(this.tableEditable.getDataItems());
+  }
+
+  loadConfigEditable() {
+    this.tableDataEditable = [
+      { title: 'Titulo 1', status: 4 },
+      { title: 'Titulo 2', status: 4 },
+      { title: 'Titulo 3', status: 1 },
+      { title: 'Titulo 4', status: 4 },
+      { title: 'Titulo 5', status: 2 },
+      { title: 'Titulo 6', status: 4 },
+    ];
+
+    this.tableEditableConfig.columns = [
+      { key: 'title', type: MiaColumn.TYPE_INPUT_EDITABLE, field_key: 'title', title: 'Title' },
+      { key: 'status', type: MiaColumn.TYPE_SELECT_EDITABLE, title: 'Estado', field_key: 'status', extra: {
+        options: [
+          { id: 0, title: 'Estado 1', color: 'warning' },
+          { id: 1, title: 'Estado 2', color: 'error' },
+          { id: 2, title: 'Estado 3', color: 'violet' },
+          { id: 3, title: 'Estado 4', color: 'success' },
+          { id: 4, title: 'Estado 5', color: 'blue' },
+          { id: 5, title: 'Estado 6', color: 'cyan' },
+          { id: 6, title: 'Estado 7', color: 'pink' },
+          { id: 7, title: 'Estado 8', color: '' },
+        ]
+      } },
+      { key: 'remove', type: MiaColumn.TYPE_REMOVE_EDITABLE, title: '' },
+    ];
   }
 
   loadConfig() {
