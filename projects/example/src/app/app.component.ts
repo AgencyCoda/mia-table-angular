@@ -61,6 +61,7 @@ export class AppComponent implements OnInit {
           { id: 7, title: 'Estado 8', color: '' },
         ]
       } },
+      { key: 'vendor', type: MiaColumn.TYPE_SELECT_SERVICE_EDITABLE, field_key: 'vendor_id', title: 'Vendor', extra: { service: this.testService, field_display: 'title', query: new MiaQuery() } },
       { key: 'remove', type: MiaColumn.TYPE_REMOVE_EDITABLE, title: '' },
     ];
   }

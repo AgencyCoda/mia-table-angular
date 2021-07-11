@@ -47,6 +47,7 @@ import { SelectEditableColumnComponent } from './columns/select-editable-column/
 import { RemoveEditableColumnComponent } from './columns/remove-editable-column/remove-editable-column.component';
 import { DateEditableColumnComponent } from './columns/date-editable-column/date-editable-column.component';
 import { CustomEditableColumnComponent } from './columns/custom-editable-column/custom-editable-column.component';
+import { SelectServiceEditableColumnComponent } from './columns/select-service-editable-column/select-service-editable-column.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { CustomEditableColumnComponent } from './columns/custom-editable-column/
     RemoveEditableColumnComponent,
     DateEditableColumnComponent,
     CustomEditableColumnComponent,
+    SelectServiceEditableColumnComponent,
   ],
   imports: [
     CommonModule,

@@ -12,16 +12,16 @@ export class TestService extends MiaBaseCrudHttpService<any> {
     protected http: HttpClient
   ) { 
     super(http);
-    this.basePathUrl = 'https://vulnwatch-development.ts.r.appspot.com/device-list';
+    this.basePathUrl = 'https://ecotopia-dev.uc.r.appspot.com/mia-blog';
   }
 
   listOb(query: MiaQuery): Observable<MiaPagination<any>> {
     let params: any = query.toParams();
-    params.access_token = 'c3349e695bd8c07388902de25278d6302e75e86d';
+    //params.access_token = 'aa9676c80bc803b902522459852365847dceb447';
     return this.postOb(this.basePathUrl + '/list', params);
   }
 
   list(query: MiaQuery): Promise<MiaPagination<any>> {
-    return this.listWithExtras(query, { access_token: 'c3349e695bd8c07388902de25278d6302e75e86d'});
+    return this.listWithExtras(query, { access_token: 'aa9676c80bc803b902522459852365847dceb447'});
   }
 }
