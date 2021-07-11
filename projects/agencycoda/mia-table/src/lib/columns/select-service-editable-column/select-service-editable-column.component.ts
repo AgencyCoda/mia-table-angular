@@ -53,7 +53,12 @@ export class SelectServiceEditableColumnComponent extends BaseEditableColumnComp
     query.itemPerPage = 5000;
     let service: MiaBaseCrudHttpService<any> = this.column.extra.service;
 
-    this.dataResultService.execute<Array<any>>( this.column.key + '-items', service.listOb(query).pipe(map(re => {
+    let dataResultId = this.column.extra?.dataResultId;
+    if(dataResultId == undefined){
+      dataResultId = this.column.key + '-items';
+    }
+
+    this.dataResultService.execute<Array<any>>(dataResultId, service.listOb(query).pipe(map(re => {
       return re.data;
      }))).subscribe(result => {
        this.items = result;
