@@ -40,13 +40,14 @@ export class AppComponent implements OnInit {
       { title: 'Titulo 1', status: 4 },
       { title: 'Titulo 2', status: 4 },
       { title: 'Titulo 3', status: 1 },
-      { title: 'Titulo 4', status: 4 },
+      { title: 'Titulo 4', status: 4, date: '1989-08-25' },
       { title: 'Titulo 5', status: 2 },
       { title: 'Titulo 6', status: 4 },
     ];
 
     this.tableEditableConfig.columns = [
       { key: 'title', type: MiaColumn.TYPE_INPUT_EDITABLE, field_key: 'title', title: 'Title' },
+      { key: 'date', type: MiaColumn.TYPE_DATE_EDITABLE, field_key: 'date', title: 'Date' },
       { key: 'status', type: MiaColumn.TYPE_SELECT_EDITABLE, title: 'Estado', field_key: 'status', extra: {
         options: [
           { id: 0, title: 'Estado 1', color: 'warning' },
