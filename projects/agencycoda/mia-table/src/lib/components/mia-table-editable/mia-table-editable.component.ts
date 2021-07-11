@@ -26,6 +26,11 @@ export class MiaTableEditableComponent implements OnInit {
     this.processData();
   }
 
+  onClickAdd() {
+    this.dataItems?.push({});
+    this.dataSource.data = this.dataItems!;
+  }
+
   onRemove(item: any) {
     let index = this.dataItems?.indexOf(item);
     if(index != undefined && index != -1){

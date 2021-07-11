@@ -45,6 +45,7 @@ export class AppComponent implements OnInit {
       { title: 'Titulo 6', status: 4 },
     ];
 
+    this.tableEditableConfig.hasAdd = true;
     this.tableEditableConfig.columns = [
       { key: 'title', type: MiaColumn.TYPE_INPUT_EDITABLE, field_key: 'title', title: 'Title' },
       { key: 'date', type: MiaColumn.TYPE_DATE_EDITABLE, field_key: 'date', title: 'Date' },
