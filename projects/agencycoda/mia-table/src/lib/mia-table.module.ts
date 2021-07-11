@@ -15,6 +15,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS, MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 
 /** Others libraries */
 import { MiaLoadingModule } from '@agencycoda/mia-loading';
@@ -42,6 +45,7 @@ import { FilesizeColumnComponent } from './columns/filesize-column/filesize-colu
 import { InputEditableColumnComponent } from './columns/input-editable-column/input-editable-column.component';
 import { SelectEditableColumnComponent } from './columns/select-editable-column/select-editable-column.component';
 import { RemoveEditableColumnComponent } from './columns/remove-editable-column/remove-editable-column.component';
+import { DateEditableColumnComponent } from './columns/date-editable-column/date-editable-column.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +69,7 @@ import { RemoveEditableColumnComponent } from './columns/remove-editable-column/
     InputEditableColumnComponent,
     SelectEditableColumnComponent,
     RemoveEditableColumnComponent,
+    DateEditableColumnComponent,
   ],
   imports: [
     CommonModule,
@@ -86,12 +91,21 @@ import { RemoveEditableColumnComponent } from './columns/remove-editable-column/
     MatInputModule,
     MatSelectModule,
     MatListModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
   ],
   exports: [
+    MatMomentDateModule,
+
     MiaTableComponent,
     MiaTableEditableComponent,
 
     MiaEditColumnsComponent
+  ],
+  providers: [
+    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS] },
+    { provide: MAT_DATE_LOCALE, useValue: 'en-Us' },
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true, strict: true} },
   ]
 })
 export class MiaTableModule { }
