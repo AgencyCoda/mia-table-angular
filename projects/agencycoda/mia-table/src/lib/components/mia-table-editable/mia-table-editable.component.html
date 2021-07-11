@@ -22,6 +22,7 @@
                 <mia-date-editable-column *ngIf="column.type == 'date-editable'" [column]="column" [item]="item" [configEdit]="config"></mia-date-editable-column>
                 <mia-select-editable-column *ngIf="column.type == 'select-editable'" [column]="column" [item]="item" [configEdit]="config"></mia-select-editable-column>
                 <mia-remove-editable-column *ngIf="column.type == 'remove-editable'" [column]="column" [item]="item" [configEdit]="config" (remove)="onRemove($event)"></mia-remove-editable-column>
+                <mia-custom-editable-column *ngIf="column.type == 'custom-editable'" [column]="column" [item]="item" [configEdit]="config"></mia-custom-editable-column>
             </td>
 
         </ng-container>

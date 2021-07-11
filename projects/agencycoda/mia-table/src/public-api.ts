@@ -24,6 +24,7 @@ export * from './lib/mia-table.service';
  * Columns
  */
 export * from './lib/columns/base-column.component';
+export * from './lib/columns/base-editable-column.component';
 export * from './lib/columns/string-column/string-column.component';
 export * from './lib/columns/selection-column/selection-column.component';
 export * from './lib/columns/date-column/date-column.component';
