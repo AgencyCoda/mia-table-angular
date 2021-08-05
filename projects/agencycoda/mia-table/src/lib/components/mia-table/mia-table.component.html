@@ -44,6 +44,7 @@
                 <mia-user-column *ngIf="column.type == 'user'" [column]="column" [item]="item"></mia-user-column>
                 <mia-date-column *ngIf="column.type == 'date'" [column]="column" [item]="item"></mia-date-column>
                 <mia-more-column *ngIf="column.type == 'more'" [column]="column" [item]="item" [config]="config"></mia-more-column>
+                <mia-more-options-column *ngIf="column.type == 'more-options'" [column]="column" [item]="item" [config]="config"></mia-more-options-column>
                 <mia-status-column *ngIf="column.type == 'status'" [column]="column" [item]="item"></mia-status-column>
                 <mia-icon-toggle-column *ngIf="column.type == 'icon-toggle'" [column]="column" [item]="item" [config]="config"></mia-icon-toggle-column>
                 <mia-custom-column *ngIf="column.type == 'custom'" [column]="column" [item]="item" [config]="config"></mia-custom-column>

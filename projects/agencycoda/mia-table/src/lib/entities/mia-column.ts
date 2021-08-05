@@ -1,5 +1,7 @@
 export class MiaColumn {
 
+    static TYPE_MORE_OPTIONS = 'more-options';
+
     static TYPE_INPUT_EDITABLE = 'input-editable';
     static TYPE_DATE_EDITABLE = 'date-editable';
     static TYPE_SELECT_EDITABLE = 'select-editable';

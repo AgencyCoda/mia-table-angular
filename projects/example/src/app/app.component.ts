@@ -105,7 +105,25 @@ export class AppComponent implements OnInit {
           { icon: 'create', title: 'Edit', key: 'edit' },
           { icon: 'delete', title: 'Delete', key: 'remove' },
         ]
-      } }
+      } },
+      { 
+        key: 'more-option', 
+        type: MiaColumn.TYPE_MORE_OPTIONS, 
+        title: '',
+        field_key: 'role_id',
+        extra: {
+          actions: {
+            1: [
+              { icon: 'create', title: 'Edit', key: 'edit' },
+            ],
+            4: [
+              { icon: 'visibility', title: 'View', key: 'view' },
+              { icon: 'create', title: 'Edit', key: 'edit' },
+              { icon: 'delete', title: 'Delete', key: 'remove' },
+            ]
+          }
+        }
+      }
     ];
 
     this.tableConfig.loadingColor = 'red';
