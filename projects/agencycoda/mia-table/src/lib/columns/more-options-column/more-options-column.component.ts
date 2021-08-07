@@ -22,9 +22,12 @@ export class MoreOptionsColumnComponent extends MoreColumnComponent implements O
   processActions() {
     let val = this.getFieldValue();
     let actions = this.column.extra.actions[val];
+    let defaultActions = this.column.extra.default;
 
     if(actions != undefined){
       this.actions = actions;
+    } else if (defaultActions != undefined) {
+      this.actions = defaultActions;
     }
   }
 
