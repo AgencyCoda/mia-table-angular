@@ -41,6 +41,7 @@ export * from './lib/columns/filesize-column/filesize-column.component';
 export * from './lib/components/mia-table/mia-table.component';
 export * from './lib/components/mia-table-editable/mia-table-editable.component';
 export * from './lib/components/mia-edit-columns/mia-edit-columns.component';
+export * from './lib/components/mia-infinite-scroll-service/mia-infinite-scroll-service.component';
 
 /**
  * Modules

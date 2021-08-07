@@ -49,11 +49,13 @@ import { DateEditableColumnComponent } from './columns/date-editable-column/date
 import { CustomEditableColumnComponent } from './columns/custom-editable-column/custom-editable-column.component';
 import { SelectServiceEditableColumnComponent } from './columns/select-service-editable-column/select-service-editable-column.component';
 import { MoreOptionsColumnComponent } from './columns/more-options-column/more-options-column.component';
+import { MiaInfiniteScrollServiceComponent } from './components/mia-infinite-scroll-service/mia-infinite-scroll-service.component';
 
 @NgModule({
   declarations: [
     MiaTableComponent,
     MiaTableEditableComponent,
+    MiaInfiniteScrollServiceComponent,
 
     BaseColumnComponent,
     StringColumnComponent,
@@ -106,7 +108,9 @@ import { MoreOptionsColumnComponent } from './columns/more-options-column/more-o
     MiaTableComponent,
     MiaTableEditableComponent,
 
-    MiaEditColumnsComponent
+    MiaEditColumnsComponent,
+
+    MiaInfiniteScrollServiceComponent
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS] },

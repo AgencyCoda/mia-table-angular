@@ -20,8 +20,10 @@ export class AppComponent implements OnInit {
 
   mockData?: MiaPagination<any>;
 
+  queryScroll = new MiaQuery();
+
   constructor(
-    protected testService: TestService
+    public testService: TestService
   ){
 
   }
@@ -29,6 +31,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.loadConfig();
     this.loadConfigEditable();
+
+    this.queryScroll.itemPerPage = 1;
   }
 
   onClickSave() {
