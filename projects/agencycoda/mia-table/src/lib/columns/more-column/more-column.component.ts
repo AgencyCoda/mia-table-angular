@@ -8,8 +8,6 @@ import { BaseColumnComponent } from '../base-column.component';
   styleUrls: ['./more-column.component.scss']
 })
 export class MoreColumnComponent extends BaseColumnComponent implements OnInit {
-
-  @Input() config!: MiaTableConfig;
   
   constructor() {
     super();
@@ -19,7 +17,7 @@ export class MoreColumnComponent extends BaseColumnComponent implements OnInit {
   }
 
   clickButton(itemAction: any, $event: UIEvent) {
-    this.config.onClick.next({ key: itemAction.key, item: this.item });
+    this.config!.onClick.next({ key: itemAction.key, item: this.item });
     $event.preventDefault();
     return false;
   }

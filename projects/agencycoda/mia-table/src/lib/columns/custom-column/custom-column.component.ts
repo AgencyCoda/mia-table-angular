@@ -27,5 +27,6 @@ export class CustomColumnComponent extends BaseColumnComponent implements OnInit
     const view = this.viewContainerRef.createComponent(component);
     (<BaseColumnComponent>view.instance).column = this.column;
     (<BaseColumnComponent>view.instance).item = this.item;
+    (<BaseColumnComponent>view.instance).config = this.config;
   }
 }
