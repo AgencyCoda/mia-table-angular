@@ -62,7 +62,7 @@
         </tr>
     </table>
 
-    <mat-paginator *ngIf="dataItems" [length]="dataItems!.total" [pageSize]="config.query.itemPerPage" [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPageChange($event)"></mat-paginator>
+    <mat-paginator *ngIf="dataItems" [pageIndex]="config.query.pageCurrent-1" [length]="dataItems!.total" [pageSize]="config.query.itemPerPage" [pageSizeOptions]="[5, 10, 25, 50, 100]" (page)="onPageChange($event)"></mat-paginator>
 </div>
 
 <div *ngIf="config.hasEmptyScreen && !_isLoading && dataItems && dataItems!.data.length <= 0" class="empty-screen">
