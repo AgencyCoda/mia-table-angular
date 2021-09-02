@@ -1,5 +1,7 @@
 export class MiaColumn {
 
+    static TYPE_STRING = 'string';
+    static TYPE_DATE = 'date';
     static TYPE_MORE_OPTIONS = 'more-options';
 
     static TYPE_INPUT_EDITABLE = 'input-editable';
