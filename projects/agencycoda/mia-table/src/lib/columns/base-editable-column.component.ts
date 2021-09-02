@@ -18,6 +18,9 @@ export class BaseEditableColumnComponent extends BaseColumnComponent {
         // Config listening
         this.input.valueChanges.subscribe(val => {
             this.setFieldValueByKey(this.column.field_key, val);
+            if(this.configEdit?.subject){
+                this.configEdit?.subject.next(this.item);
+            }
         });
     }
 }

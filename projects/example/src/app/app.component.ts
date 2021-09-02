@@ -1,6 +1,7 @@
 import { MiaPagination, MiaQuery } from '@agencycoda/mia-core';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MiaColumn, MiaTableConfig, MiaTableEditableComponent, MiaTableEditableConfig } from 'projects/agencycoda/mia-table/src/public-api';
+import { Subject } from 'rxjs';
 import { CustomOneColumnComponent } from './custom-one-column/custom-one-column.component';
 import { TestService } from './test.service';
 
@@ -68,6 +69,11 @@ export class AppComponent implements OnInit {
       { key: 'vendor', type: MiaColumn.TYPE_SELECT_SERVICE_EDITABLE, field_key: 'vendor_id', title: 'Vendor', extra: { service: this.testService, field_display: 'title', query: new MiaQuery() } },
       { key: 'remove', type: MiaColumn.TYPE_REMOVE_EDITABLE, title: '' },
     ];
+
+    this.tableEditableConfig.subject = new Subject<any>();
+    this.tableEditableConfig.subject.subscribe(res => {
+      
+    });
   }
 
   loadConfig() {

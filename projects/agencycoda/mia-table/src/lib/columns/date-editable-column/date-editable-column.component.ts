@@ -32,6 +32,9 @@ export class DateEditableColumnComponent extends BaseEditableColumnComponent imp
       } else {
         this.setFieldValueByKey(this.column.field_key, '');
       }
+      if(this.configEdit?.subject){
+        this.configEdit?.subject.next(this.item);
+      }
     });
-}
+  }
 }
