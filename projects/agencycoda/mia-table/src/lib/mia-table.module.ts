@@ -50,6 +50,7 @@ import { CustomEditableColumnComponent } from './columns/custom-editable-column/
 import { SelectServiceEditableColumnComponent } from './columns/select-service-editable-column/select-service-editable-column.component';
 import { MoreOptionsColumnComponent } from './columns/more-options-column/more-options-column.component';
 import { MiaInfiniteScrollServiceComponent } from './components/mia-infinite-scroll-service/mia-infinite-scroll-service.component';
+import { TextColumnComponent } from './columns/text-column/text-column.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { MiaInfiniteScrollServiceComponent } from './components/mia-infinite-scr
     CustomEditableColumnComponent,
     SelectServiceEditableColumnComponent,
     MoreOptionsColumnComponent,
+    TextColumnComponent,
   ],
   imports: [
     CommonModule,

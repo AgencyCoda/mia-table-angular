@@ -3,6 +3,7 @@ export class MiaColumn {
     static TYPE_STRING = 'string';
     static TYPE_DATE = 'date';
     static TYPE_MORE_OPTIONS = 'more-options';
+    static TYPE_TEXT = 'text';
 
     static TYPE_INPUT_EDITABLE = 'input-editable';
     static TYPE_DATE_EDITABLE = 'date-editable';
