@@ -15,4 +15,7 @@ export class StringColumnComponent extends BaseColumnComponent implements OnInit
   ngOnInit(): void {
   }
 
+  getConditionalFieldValue(): any {
+    return this.getFieldValueByKey(this.column.extra.conditional_field);
+  }
 }

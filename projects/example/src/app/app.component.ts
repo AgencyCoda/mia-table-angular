@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
       { key: 'user', type: 'user', title: '# User', extra: { 
         field_photo: 'photo', field_firstname: 'firstname', field_lastname: 'lastname', field_subtitle: 'role', field_is_online: 'is_online' 
       } },
-      { key: 'title', type: 'string', title: 'Titulo', field_key: 'title' },
+      { key: 'title', type: 'string', title: 'Titulo', field_key: 'title', extra: { conditional_field: 'status' } },
       { key: 'status', type: 'status', title: 'Estado', field_key: 'status', extra: {
         options: [
           { value: 0, title: 'Estado 1', color: 'warning' },
@@ -165,7 +165,7 @@ export class AppComponent implements OnInit {
           id: 2, role_id: 3, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
         },
         {
-          id: 3, role_id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
+          id: 3, role_id: 1, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: '', subtitle: 'Administrador', is_online: 0, created_at: '1989-08-25 18:00:00'
         },
         {
           id: 4, role_id: 4, title: 'asdasdasd', firstname: 'Matias', lastname: 'Camiletti', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png', subtitle: 'Administrador', is_online: 0, status: 1, created_at: '1989-08-25 18:00:00'
