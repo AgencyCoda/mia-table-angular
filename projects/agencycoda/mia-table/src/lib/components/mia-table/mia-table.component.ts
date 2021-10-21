@@ -24,6 +24,7 @@ export class MiaTableComponent implements OnInit {
 
   @Output() isLoading = new EventEmitter<boolean>();
   @Output() pageChange = new EventEmitter<PageEvent>();
+  @Output() loadDataCompleted = new EventEmitter<any>();
 
   selection = new SelectionModel<any>(true, [], true);
   dataItems?: MiaPagination<any>;
@@ -60,6 +61,7 @@ export class MiaTableComponent implements OnInit {
       this.dataItems = result;
       this.processFirstLoad();
       this.setEndLoading();
+      this.loadDataCompleted.emit(result);
     });
   }
 
@@ -69,6 +71,7 @@ export class MiaTableComponent implements OnInit {
       this.dataItems = result;
       this.processFirstLoad();
       this.setEndLoading();
+      this.loadDataCompleted.emit(result);
     });
   }
 
