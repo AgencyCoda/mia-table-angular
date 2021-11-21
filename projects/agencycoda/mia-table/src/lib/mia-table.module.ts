@@ -51,6 +51,7 @@ import { SelectServiceEditableColumnComponent } from './columns/select-service-e
 import { MoreOptionsColumnComponent } from './columns/more-options-column/more-options-column.component';
 import { MiaInfiniteScrollServiceComponent } from './components/mia-infinite-scroll-service/mia-infinite-scroll-service.component';
 import { TextColumnComponent } from './columns/text-column/text-column.component';
+import { ArrayColumnComponent } from './columns/array-column/array-column.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { TextColumnComponent } from './columns/text-column/text-column.component
     SelectServiceEditableColumnComponent,
     MoreOptionsColumnComponent,
     TextColumnComponent,
+    ArrayColumnComponent,
   ],
   imports: [
     CommonModule,

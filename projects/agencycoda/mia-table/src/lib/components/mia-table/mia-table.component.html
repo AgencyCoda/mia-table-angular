@@ -50,6 +50,7 @@
                 <mia-custom-column *ngIf="column.type == 'custom'" [column]="column" [item]="item" [config]="config"></mia-custom-column>
                 <mia-item-relation-column *ngIf="column.type == 'item-relation'" [column]="column" [item]="item" [config]="config"></mia-item-relation-column>
                 <mia-text-column *ngIf="column.type == 'text'" [column]="column" [item]="item"></mia-text-column>
+                <mia-array-column *ngIf="column.type == 'array'" [column]="column" [item]="item"></mia-array-column>
             </td>
 
         </ng-container>

@@ -35,6 +35,7 @@ export * from './lib/columns/user-column/user-column.component';
 export * from './lib/columns/photo-column/photo-column.component';
 export * from './lib/columns/filesize-column/filesize-column.component';
 export * from './lib/columns/text-column/text-column.component';
+export * from './lib/columns/array-column/array-column.component';
 
 /**
  * Components
