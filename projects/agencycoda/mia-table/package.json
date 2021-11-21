@@ -9,7 +9,8 @@
     "@angular/material-moment-adapter": ">=11.2.5",
     "@agencycoda/mia-core": ">=11.0.11",
     "@agencycoda/mia-loading": ">=0.0.2",
-    "@ngx-pwa/local-storage": ">=11.1.0"
+    "@ngx-pwa/local-storage": ">=11.1.0",
+    "@angular/flex-layout": "^12.0.0-beta.35"
   },
   "dependencies": {
     "tslib": "^2.0.0"
