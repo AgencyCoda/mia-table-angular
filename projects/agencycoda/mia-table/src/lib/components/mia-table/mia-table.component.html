@@ -25,12 +25,11 @@
             <!-- Header -->
             <th mat-header-cell *matHeaderCellDef>
                 <ng-container *ngIf="column.type == 'selection'">
-                    <!--<mat-checkbox
-                        (change)="$event ? masterToggle() : null"
-                        [checked]="selection.hasValue() && isAllSelected()"
-                        [indeterminate]="selection.hasValue() && !isAllSelected()"
-                        [aria-label]="checkboxLabel()">
-                    </mat-checkbox>-->
+                    <mat-checkbox *ngIf="column.extra && column.extra.all"
+                        (change)="onSelectAll($event)"
+                        [checked]="selection.hasValue() && selection.selected.length == dataItems.data.length"
+                        [indeterminate]="selection.hasValue() && selection.selected.length != dataItems.data.length">
+                    </mat-checkbox>
                 </ng-container>
                 <ng-container>
                     {{ column.title }}

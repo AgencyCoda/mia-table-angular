@@ -6,6 +6,7 @@ import { MiaPagination } from '@agencycoda/mia-core';
 import { PageEvent } from '@angular/material/paginator';
 import { StorageMap } from '@ngx-pwa/local-storage';
 import { Observable } from 'rxjs';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 
 export const MIA_TABLE_KEY_STORAGE_COLUMNS = 'mia_table.columns_';
 
@@ -53,6 +54,15 @@ export class MiaTableComponent implements OnInit {
   onClickDeleteBulk() {
     this.config.onClick.next({ key: 'delete-bulk', item: this.selection.selected });
     this.selection.clear();
+  }
+
+  onSelectAll(event: MatCheckboxChange) {
+    if(event.checked){
+      this.selection.clear();
+      this.dataItems?.data.forEach(i => this.selection.toggle(i));
+    } else {
+      this.selection.clear();
+    }
   }
 
   loadWithObservable(serviceOb: Observable<MiaPagination<any>>) {

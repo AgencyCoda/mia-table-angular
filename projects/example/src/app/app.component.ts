@@ -80,7 +80,7 @@ export class AppComponent implements OnInit {
     //this.tableConfig.service = this.testService;
     this.tableConfig.id = 'table-test';
     this.tableConfig.columns = [
-      { key: 'selection', type: 'selection', title: '' },
+      { key: 'selection', type: 'selection', title: '', extra: { all: true } },
       //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },
       { key: 'item-role', type: 'item-relation', title: 'Role', field_key: 'role_id', extra: { field_display: 'title', field_relation_id: 'id', service: this.testService, query: new MiaQuery() } },
       { key: 'photo', type: 'photo', title: 'Photo', field_key: 'photo' },
@@ -146,6 +146,7 @@ export class AppComponent implements OnInit {
     this.tableConfig.onClick.subscribe(result => {
       console.log('--ACTION--');
       console.log(result.key);
+      console.log(result.item);
     });
 
     this.mockData = {
