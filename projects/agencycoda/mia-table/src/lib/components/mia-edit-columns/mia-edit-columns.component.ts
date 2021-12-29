@@ -21,6 +21,10 @@ export class MiaEditColumnsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getColumns() {
+    return this.config.columns.filter(c => c.extra && c.extra.isEditable);
+  }
+
   saveColumns() {
     let data = new Array<boolean>();
     for (const column of this.config.columns) {

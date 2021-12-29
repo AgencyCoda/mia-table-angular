@@ -82,9 +82,9 @@ export class AppComponent implements OnInit {
     this.tableConfig.columns = [
       { key: 'selection', type: 'selection', title: '', extra: { all: true } },
       //{ key: 'id', type: 'string', title: 'ID', field_key: 'id' },
-      { key: 'item-role', type: 'item-relation', title: 'Role', field_key: 'role_id', extra: { field_display: 'title', field_relation_id: 'id', service: this.testService, query: new MiaQuery() } },
-      { key: 'photo', type: 'photo', title: 'Photo', field_key: 'photo' },
-      { key: 'custom', type: 'custom', title: 'Custom', extra: { component: CustomOneColumnComponent } },
+      { key: 'item-role', type: 'item-relation', title: 'Role', field_key: 'role_id', extra: { field_display: 'title', field_relation_id: 'id', service: this.testService, query: new MiaQuery(), isEditable: true } },
+      { key: 'photo', type: 'photo', title: 'Photo', field_key: 'photo', extra: { isEditable: true } },
+      { key: 'custom', type: 'custom', title: 'Custom', extra: { component: CustomOneColumnComponent, isEditable: true } },
       { key: 'user', type: 'user', title: '# User', extra: { 
         field_photo: 'photo', field_firstname: 'firstname', field_lastname: 'lastname', field_subtitle: 'role', field_is_online: 'is_online' 
       } },
