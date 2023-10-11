@@ -9,8 +9,6 @@ import { BaseColumnComponent } from '../base-column.component';
 })
 export class IconToggleColumnComponent extends BaseColumnComponent implements OnInit {
 
-  @Input() config!: MiaTableConfig;
-
   constructor() {
     super();
   }
@@ -19,7 +17,7 @@ export class IconToggleColumnComponent extends BaseColumnComponent implements On
   }
 
   clickButton($event: any) {
-    this.config.onClick.next({ key: this.column.extra.key_action, item: this.item });
+    this.config?.onClick.next({ key: this.column.extra.key_action, item: this.item });
     $event.stopPropagation();
     $event.preventDefault();
     return false;
