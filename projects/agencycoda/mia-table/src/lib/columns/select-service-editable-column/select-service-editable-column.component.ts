@@ -58,7 +58,7 @@ export class SelectServiceEditableColumnComponent extends BaseEditableColumnComp
       dataResultId = this.column.key + '-items';
     }
 
-    this.dataResultService.execute<Array<any>>(dataResultId, service.listOb(query).pipe(map(re => {
+    this.dataResultService.execute<Array<any>>(dataResultId, service.list(query).pipe(map(re => {
       return re.data;
      }))).subscribe(result => {
        this.items = result;

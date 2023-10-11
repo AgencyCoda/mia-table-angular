@@ -43,7 +43,7 @@ export class MiaTableComponent implements OnInit {
   }
 
   onClickSelect() {
-    
+
   }
 
   onClickItem(item: any) {
@@ -76,12 +76,23 @@ export class MiaTableComponent implements OnInit {
   }
 
   loadItemsWithExtra(params: any) {
-    if(this.config.service == undefined){
+    if (this.config.service == undefined) {
       return;
     }
-    
-    this.loadWithPromise(this.config.service.listWithExtras(this.config.query, params));
+
+    const observable = this.config.service.listWithExtras(this.config.query, params);
+
+    const promise = observable.toPromise()
+      .then(result => {
+        if (result === undefined) {
+          throw new Error('Result is undefined');
+        }
+        return result;
+      });
+
+    this.loadWithPromise(promise);
   }
+
 
   loadItems() {
     this.loadItemsWithExtra({});
@@ -156,7 +167,7 @@ export class MiaTableComponent implements OnInit {
       this.config.hasEmptyScreen = false;
     }
   }
-  
+
   setStartLoading() {
     this._isLoading = true;
     this.isLoading.emit(true);

@@ -44,7 +44,7 @@ export class ItemRelationColumnComponent extends BaseColumnComponent implements 
     }
 
     let service: MiaBaseCrudHttpService<any> = this.column.extra.service;
-    service.listOb(query).subscribe(result => {
+    service.list(query).subscribe(result => {
       this.column.extra.options = result.data;
     });
   }

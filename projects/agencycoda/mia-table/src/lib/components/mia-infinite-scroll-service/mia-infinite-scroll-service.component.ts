@@ -37,7 +37,7 @@ export class MiaInfiniteScrollServiceComponent implements OnInit {
 
     this.isLoading = true;
     this.isFirstLoad = false;
-    this.service.listOb(this.query).subscribe(res => {
+    this.service.list(this.query).subscribe(res => {
       this.dataItems.data.push(res.data);
       this.dataItems.current_page = res.current_page;
       this.dataItems.last_page = res.last_page;
