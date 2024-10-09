@@ -43,8 +43,8 @@ export class ItemRelationColumnComponent extends BaseColumnComponent implements 
       query = new MiaQuery();
     }
 
-    let service: MiaBaseCrudHttpService<any> = this.column.extra.service;
-    service.list(query).subscribe(result => {
+    const service: MiaBaseCrudHttpService<any> = this.column.extra.service;
+    service.list(query).then(result => {
       this.column.extra.options = result.data;
     });
   }

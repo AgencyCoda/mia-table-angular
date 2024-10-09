@@ -80,15 +80,15 @@ export class MiaTableComponent implements OnInit {
       return;
     }
 
-    const observable = this.config.service.listWithExtras(this.config.query, params);
+    const promise = this.config.service.listWithExtras(this.config.query, params);
 
-    const promise = observable.toPromise()
-      .then(result => {
-        if (result === undefined) {
-          throw new Error('Result is undefined');
-        }
-        return result;
-      });
+    // const promise = observable.toPromise()
+    //   .then(result => {
+    //     if (result === undefined) {
+    //       throw new Error('Result is undefined');
+    //     }
+    //     return result;
+    //   });
 
     this.loadWithPromise(promise);
   }
