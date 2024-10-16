@@ -16,4 +16,5 @@ export class MiaTableConfig {
     emptyScreenImage?: string;
     emptyScreenTitle?: string;
     emptyScreenText?: string;
+    showPaginator = true;
 }
