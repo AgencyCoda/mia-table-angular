@@ -24,7 +24,7 @@ jobs:
             npm install -g @angular/cli          
  
       - name: Build
-        run: ng build --prod --project=@agencycoda/mia-table
+        run: ng build --configuration production --project=@agencycoda/mia-table
 
       - name: Replace version in package.json
         run: |
