@@ -1,0 +1,39 @@
+name: Deploy to npm
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on version tags
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+            npm install
+            npm install -g @angular/cli          
+ 
+      - name: Build
+        run: ng build --prod --project=@agencycoda/mia-form      
+
+      - name: Replace version in package.json
+        run: |
+          TAG_VERSION=${GITHUB_REF#refs/tags/}
+          jq --arg version "$TAG_VERSION" '.version = $version' dist/agencycoda/mia-form/package.json > tmp.json && mv tmp.json dist/agencycoda/mia-form/package.json
+
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+          package: dist/agencycoda/mia-form/package.json
