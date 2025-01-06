@@ -24,16 +24,16 @@ jobs:
             npm install -g @angular/cli          
  
       - name: Build
-        run: ng build --prod --project=@agencycoda/mia-form      
+        run: ng build --configuration production --project=@agencycoda/mia-table
 
       - name: Replace version in package.json
         run: |
           TAG_VERSION=${GITHUB_REF#refs/tags/}
-          jq --arg version "$TAG_VERSION" '.version = $version' dist/agencycoda/mia-form/package.json > tmp.json && mv tmp.json dist/agencycoda/mia-form/package.json
+          jq --arg version "$TAG_VERSION" '.version = $version' dist/agencycoda/mia-table/package.json > tmp.json && mv tmp.json dist/agencycoda/mia-table/package.json
 
       - name: Publish to npm
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
-          package: dist/agencycoda/mia-form/package.json
+          package: dist/agencycoda/mia-table/package.json
