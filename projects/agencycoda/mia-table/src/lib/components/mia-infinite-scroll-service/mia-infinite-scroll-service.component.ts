@@ -1,4 +1,4 @@
-import { MiaBaseCrudHttpService, MiaPagination, MiaQuery } from '@agencycoda/mia-core';
+import { MiaBaseCrudHttpService, MiaPagination, MiaQuery } from '@agencycoda/mia-core-jv';
 import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({

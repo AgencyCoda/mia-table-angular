@@ -1,4 +1,4 @@
-import { MiaBaseCrudHttpService, MiaQuery, MiaDataResultService } from '@agencycoda/mia-core';
+import { MiaBaseCrudHttpService, MiaQuery, MiaDataResultService } from '@agencycoda/mia-core-jv';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { BaseEditableColumnComponent } from '../base-editable-column.component';

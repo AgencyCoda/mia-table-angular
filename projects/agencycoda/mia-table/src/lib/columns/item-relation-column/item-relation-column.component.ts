@@ -1,4 +1,4 @@
-import { MiaBaseCrudHttpService, MiaQuery } from '@agencycoda/mia-core';
+import { MiaBaseCrudHttpService, MiaQuery } from '@agencycoda/mia-core-jv';
 import { Component, OnInit } from '@angular/core';
 import { BaseColumnComponent } from '../base-column.component';
 

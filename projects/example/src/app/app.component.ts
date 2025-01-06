@@ -1,4 +1,4 @@
-import { MiaPagination, MiaQuery } from '@agencycoda/mia-core';
+import { MiaPagination, MiaQuery } from '@agencycoda/mia-core-jv';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MiaColumn, MiaTableConfig, MiaTableEditableComponent, MiaTableEditableConfig } from 'projects/agencycoda/mia-table/src/public-api';
 import { Subject } from 'rxjs';

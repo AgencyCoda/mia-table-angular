@@ -4,12 +4,13 @@
   "peerDependencies": {
     "@angular/common": "~16.2.12",
     "@angular/core": "~16.2.12",
-    "@angular/cdk": "~16.2.12",
+    "@angular/cdk": "~16.2.0",
     "@angular/material": "~16.2.14",
     "@angular/material-moment-adapter": "~16.2.2",
     "@agencycoda/mia-core": "^16.0.0",
     "@agencycoda/mia-loading": "^16.0.0",
-    "@ngx-pwa/local-storage": "^16.0.0"
+    "@ngx-pwa/local-storage": "^16.0.0",
+    "@agencycoda/mia-core-jv": "^16.0.6"
   },
   "dependencies": {
     "tslib": "^2.0.0"

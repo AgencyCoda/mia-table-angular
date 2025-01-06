@@ -1,4 +1,4 @@
-import { MiaBaseCrudHttpService, MiaQuery } from "@agencycoda/mia-core";
+import { MiaBaseCrudHttpService, MiaQuery } from "@agencycoda/mia-core-jv";
 import { Subject } from "rxjs";
 import { MiaColumn } from "./mia-column";
 

@@ -2,7 +2,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { TableAnimation } from '../../animations/table-animation';
 import { MiaTableConfig } from '../../entities/mia-table-config';
-import { MiaPagination } from '@agencycoda/mia-core';
+import { MiaPagination } from '@agencycoda/mia-core-jv';
 import { PageEvent } from '@angular/material/paginator';
 import { StorageMap } from '@ngx-pwa/local-storage';
 import { Observable } from 'rxjs';

@@ -1,4 +1,4 @@
-import { MiaCoreModule } from '@agencycoda/mia-core';
+import { MiaCoreModule } from '@agencycoda/mia-core-jv';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';

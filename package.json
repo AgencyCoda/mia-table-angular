@@ -1,5 +1,5 @@
 {
-  "name": "mia-table-angular",
+  "name": "mia-table-angular-jv",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,18 +12,15 @@
   },
   "private": true,
   "dependencies": {
-    "@agencycoda/mia-core": "^16.0.4",
+    "@agencycoda/mia-core-jv": "^16.0.6",
     "@agencycoda/mia-loading": "^16.0.0",
-
-    "@angular/common": "^16.2.12",
-    "@angular/core": "^16.2.12",
-    "@angular/material": "^16.2.14",
     "@angular/animations": "^16.2.12",
-    "@angular/forms": "^16.2.12",
-
-
     "@angular/cdk": "~16.2.0",
+    "@angular/common": "^16.2.12",
     "@angular/compiler": "~16.2.0",
+    "@angular/core": "^16.2.12",
+    "@angular/forms": "^16.2.12",
+    "@angular/material": "^16.2.14",
     "@angular/material-moment-adapter": "~16.2.0",
     "@angular/platform-browser": "~16.2.0",
     "@angular/platform-browser-dynamic": "~16.2.0",
